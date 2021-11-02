@@ -1,3 +1,8 @@
+/*
+ * SPDX-License-Identifier: MIT
+ * SPDX-FileCopyrightText: 2021 Chandram Dutta <chandramdutta2004.com>
+ */
+
 public class MyApp : Gtk.Application{
     public MyApp(){
         Object(
@@ -13,14 +18,8 @@ public class MyApp : Gtk.Application{
             default_width = 400,
             title ="Hello World"
         };
-        var button_hello = new Gtk.Button.with_label("Click Me!!"){
-            margin = 12
-        };
-        button_hello.clicked.connect(()=> {
-            button_hello.label = "Hello World!";
-            button_hello.sensitive = false;
-        });
-        main_window.add(button_hello);
+        var label = new Gtk.Label("Hello World Again!!");
+        main_window.add(label);
         main_window.show_all();
     }
     public static int main (string[] args) {
